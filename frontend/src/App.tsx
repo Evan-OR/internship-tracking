@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import ApplicationDisplay from './ApplicationDisplay';
 import './App.css';
 
 interface Application {
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div>{apps ? apps.map((app) => <div key={app.id}>{app.title}</div>) : 'no apps'}</div>
+      <div>{apps ? apps.map((app) => <ApplicationDisplay app={app} />) : 'no apps'}</div>
     </>
   );
 }
