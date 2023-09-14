@@ -1,15 +1,7 @@
 import { useEffect, useState } from 'react';
-import ApplicationDisplay from './ApplicationDisplay';
-import './App.css';
-
-interface Application {
-  date_applied: string; // Date format: "Fri, 01 Sep 2023 00:00:00 GMT"
-  id: number;
-  post_image: string | null; // Assuming post_image can be either a string (file path) or null
-  status: string;
-  title: string;
-  type: string;
-}
+import { Application } from './types';
+import ApplicationWrapper from './components/ApplicationWrapper';
+import './index.scss';
 
 function App() {
   const [apps, setApps] = useState<Application[]>([]);
@@ -25,11 +17,7 @@ function App() {
     getApplications();
   }, []);
 
-  return (
-    <>
-      <div>{apps ? apps.map((app) => <ApplicationDisplay app={app} />) : 'no apps'}</div>
-    </>
-  );
+  return <ApplicationWrapper apps={apps} />;
 }
 
 export default App;

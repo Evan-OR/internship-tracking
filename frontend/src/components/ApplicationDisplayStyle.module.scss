@@ -1,0 +1,73 @@
+$end-padding: 0 8px;
+
+.wrapper {
+  width: 100%;
+  .applicationDisplay {
+    display: flex;
+    width: 100%;
+    margin: 8px 0;
+    padding: 5px 0;
+    border: solid rgba(255, 255, 255, 0.219) 1px;
+    border-radius: 4px;
+
+    .title {
+      flex: 2;
+      padding: $end-padding;
+    }
+    .type {
+      flex: 1;
+    }
+    .status {
+      flex: 2;
+      text-align: center;
+      border: solid 1px rgb(255, 201, 100);
+      border-radius: 8px;
+      color: rgb(255, 201, 100);
+    }
+    .date {
+      flex: 1;
+      text-align: center;
+    }
+    .btn {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: $end-padding;
+      button {
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      background-color: #313131;
+    }
+  }
+}
+
+.headings {
+  display: flex;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  .title {
+    flex: 2;
+    padding: $end-padding;
+  }
+  .type {
+    flex: 1;
+  }
+  .status {
+    flex: 2;
+    text-align: center;
+  }
+  .date {
+    flex: 1;
+    text-align: center;
+  }
+  .btn {
+    flex: 1;
+    text-align: center;
+    padding: $end-padding;
+  }
+}
